@@ -494,6 +494,172 @@
 				font-size: 22px !important;
 			}
 		}
+
+		/* ==========================================
+		   MOBILE: HIDE COMPLEX SECTIONS, SHOW SIMPLE
+		   ========================================== */
+		@media screen and (max-width: 767px) {
+			/* Hide the complex desktop hero slider */
+			.slider-home2 {
+				display: none !important;
+			}
+			
+			/* Hide complex banner section */
+			.show-banner-home2 {
+				display: none !important;
+			}
+			
+			/* Hide complex similar/handmade section */
+			.similar-home2 {
+				display: none !important;
+			}
+			
+			/* Show mobile-only sections */
+			.mobile-hero,
+			.mobile-products,
+			.mobile-about {
+				display: block !important;
+			}
+		}
+		
+		/* Desktop: hide mobile sections */
+		@media screen and (min-width: 768px) {
+			.mobile-hero,
+			.mobile-products,
+			.mobile-about {
+				display: none !important;
+			}
+		}
+		
+		/* MOBILE HERO STYLES */
+		.mobile-hero {
+			padding: 80px 20px 40px;
+			text-align: center;
+			background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+		}
+		.mobile-hero h1 {
+			font-size: 42px;
+			font-weight: 700;
+			letter-spacing: -2px;
+			margin: 0 0 5px 0;
+			line-height: 1;
+		}
+		.mobile-hero h2 {
+			font-size: 24px;
+			font-weight: 400;
+			letter-spacing: -1px;
+			margin: 0 0 15px 0;
+			color: #666;
+		}
+		.mobile-hero p {
+			font-size: 14px;
+			color: #888;
+			margin-bottom: 25px;
+			line-height: 1.5;
+		}
+		.mobile-hero .shop-btn {
+			display: inline-block;
+			background: #000;
+			color: #fff;
+			padding: 14px 35px;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.mobile-hero .shop-btn:hover {
+			background: #333;
+		}
+		.mobile-hero-image {
+			margin-top: 30px;
+		}
+		.mobile-hero-image img {
+			width: 100%;
+			max-width: 300px;
+			height: auto;
+			object-fit: cover;
+		}
+		
+		/* MOBILE PRODUCTS STYLES */
+		.mobile-products {
+			padding: 40px 15px;
+			background: #fff;
+		}
+		.mobile-products h3 {
+			font-size: 28px;
+			text-align: center;
+			margin-bottom: 10px;
+			letter-spacing: -1px;
+		}
+		.mobile-products .subtitle {
+			text-align: center;
+			font-size: 16px;
+			color: #666;
+			margin-bottom: 25px;
+		}
+		.mobile-products-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 15px;
+		}
+		.mobile-product-card {
+			background: #f9f9f9;
+			overflow: hidden;
+		}
+		.mobile-product-card img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+		}
+		.mobile-product-card .info {
+			padding: 12px;
+			text-align: center;
+		}
+		.mobile-product-card .name {
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		.mobile-product-card .type {
+			font-size: 11px;
+			color: #888;
+			margin: 3px 0 0 0;
+		}
+		
+		/* MOBILE ABOUT STYLES */
+		.mobile-about {
+			padding: 40px 20px;
+			background: #f5f5f5;
+			text-align: center;
+		}
+		.mobile-about h3 {
+			font-size: 24px;
+			margin-bottom: 15px;
+			letter-spacing: -1px;
+		}
+		.mobile-about p {
+			font-size: 14px;
+			line-height: 1.6;
+			color: #666;
+			margin-bottom: 20px;
+		}
+		.mobile-about .btn-outline {
+			display: inline-block;
+			border: 1px solid #000;
+			color: #000;
+			padding: 12px 30px;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.mobile-about .btn-outline:hover {
+			background: #000;
+			color: #fff;
+		}
 	</style>
 </head>
 <link rel="stylesheet" type="text/css" href="asset/css/shop-dropdown-fix.css">
@@ -663,6 +829,75 @@
 		</div>
 	</header>
 	<main>
+		<!-- ==========================================
+		     MOBILE-ONLY SECTIONS (Hidden on Desktop)
+		     ========================================== -->
+		
+		<!-- Mobile Hero Section -->
+		<section class="mobile-hero">
+			<h1>Bonis</h1>
+			<h2>Rubatosis</h2>
+			<p>Handcrafted luxury fashion celebrating upcycled beauty.<br>Each piece tells a story of sustainability.</p>
+			<a href="shopnow.html" class="shop-btn">Shop Now</a>
+			<div class="mobile-hero-image">
+				<img src="asset/herosection-assets/BonisRubatosistienda-dress.avif" alt="Bonis Rubatosis Featured">
+			</div>
+		</section>
+		
+		<!-- Mobile Products Section -->
+		<section class="mobile-products">
+			<h3>Handmade Fashion</h3>
+			<p class="subtitle">Crafted with passion & love</p>
+			<div class="mobile-products-grid">
+				<div class="mobile-product-card">
+					<a href="shopnow.html">
+						<img src="asset/img/img_similar1_home2.jpg" alt="Maxi Jacket">
+						<div class="info">
+							<p class="name">Maxi Jacket</p>
+							<p class="type">Designer</p>
+						</div>
+					</a>
+				</div>
+				<div class="mobile-product-card">
+					<a href="shopnow.html">
+						<img src="asset/img/img_similar2_home2.jpg" alt="Handmade Bag">
+						<div class="info">
+							<p class="name">Handmade Bag</p>
+							<p class="type">Designer</p>
+						</div>
+					</a>
+				</div>
+				<div class="mobile-product-card">
+					<a href="shopnow.html">
+						<img src="asset/img/img_similar3_home2.jpg" alt="Blanket Jacket">
+						<div class="info">
+							<p class="name">Blanket Jacket</p>
+							<p class="type">Designer</p>
+						</div>
+					</a>
+				</div>
+				<div class="mobile-product-card">
+					<a href="shopnow.html">
+						<img src="asset/img/img_similar4_home2.jpg" alt="Wallet">
+						<div class="info">
+							<p class="name">Card Wallet</p>
+							<p class="type">Designer</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Mobile About Section -->
+		<section class="mobile-about">
+			<h3>Our Story</h3>
+			<p>Where craftsmanship meets modern style. Explore unique clothing and accessories, made to be worn, loved, and remembered.</p>
+			<a href="about.html" class="btn-outline">Learn More</a>
+		</section>
+		
+		<!-- ==========================================
+		     DESKTOP SECTIONS (Hidden on Mobile)
+		     ========================================== -->
 		<div class="slider-home2 container-fluid">
 			<div class="row">
 				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
@@ -1241,140 +1476,140 @@
 			<a href="#" class="capital des-font">start shopping</a>
 		</div>
 	</div>
-<script src="asset/js/jquery-3.3.1.min.js" defer=""></script>
-<script src="asset/js/bootstrap.min.js" defer=""></script>
-<script src="asset/js/slick.min.js" defer=""></script>
-<script src="asset/js/function-main.js?v=999999" defer=""></script>
-<script>
-// Mobile Responsive Fix - Override inline styles on mobile devices
-(function() {
-	function applyMobileFixes() {
-		var isMobile = window.innerWidth <= 767;
-		var isSmallMobile = window.innerWidth <= 480;
-		var isVerySmallMobile = window.innerWidth <= 375;
-		
-		// Target elements with inline font-size: 200px
-		var largeTextElements = document.querySelectorAll('[style*="font-size: 200px"]');
-		largeTextElements.forEach(function(el) {
-			if (isMobile) {
-				if (isVerySmallMobile) {
-					el.style.fontSize = '30px';
-					el.style.letterSpacing = '-2px';
-				} else if (isSmallMobile) {
-					el.style.fontSize = '36px';
-					el.style.letterSpacing = '-2px';
-				} else {
-					el.style.fontSize = '45px';
-					el.style.letterSpacing = '-2px';
+	<script src="asset/js/jquery-3.3.1.min.js" defer=""></script>
+	<script src="asset/js/bootstrap.min.js" defer=""></script>
+	<script src="asset/js/slick.min.js" defer=""></script>
+	<script src="asset/js/function-main.js?v=999999" defer=""></script>
+	<script>
+		// Mobile Responsive Fix - Override inline styles on mobile devices
+		(function () {
+			function applyMobileFixes() {
+				var isMobile = window.innerWidth <= 767;
+				var isSmallMobile = window.innerWidth <= 480;
+				var isVerySmallMobile = window.innerWidth <= 375;
+
+				// Target elements with inline font-size: 200px
+				var largeTextElements = document.querySelectorAll('[style*="font-size: 200px"]');
+				largeTextElements.forEach(function (el) {
+					if (isMobile) {
+						if (isVerySmallMobile) {
+							el.style.fontSize = '30px';
+							el.style.letterSpacing = '-2px';
+						} else if (isSmallMobile) {
+							el.style.fontSize = '36px';
+							el.style.letterSpacing = '-2px';
+						} else {
+							el.style.fontSize = '45px';
+							el.style.letterSpacing = '-2px';
+						}
+					}
+				});
+
+				// Target elements with inline font-size: 100px
+				var mediumTextElements = document.querySelectorAll('[style*="font-size: 100px"]');
+				mediumTextElements.forEach(function (el) {
+					if (isMobile) {
+						if (isVerySmallMobile) {
+							el.style.fontSize = '18px';
+							el.style.letterSpacing = '-1px';
+							el.style.marginLeft = '0';
+							el.style.marginTop = '-5px';
+						} else if (isSmallMobile) {
+							el.style.fontSize = '22px';
+							el.style.letterSpacing = '-1px';
+							el.style.marginLeft = '0';
+							el.style.marginTop = '-5px';
+						} else {
+							el.style.fontSize = '26px';
+							el.style.letterSpacing = '-1px';
+							el.style.marginLeft = '0';
+							el.style.marginTop = '-8px';
+						}
+					}
+				});
+
+				// Fix show-banner-home2 section alignment
+				var bannerSection = document.querySelector('.show-banner-home2 > .text-center');
+				if (bannerSection && isMobile) {
+					bannerSection.style.marginBottom = '30px';
+					var innerDiv = bannerSection.querySelector('div[style*="display: inline-block"]');
+					if (innerDiv) {
+						innerDiv.style.display = 'block';
+						innerDiv.style.marginRight = '0';
+						innerDiv.style.textAlign = 'center';
+					}
 				}
+
+				// Fix video overlay content-pr positioning
+				var contentPr = document.querySelectorAll('.content-pr');
+				contentPr.forEach(function (el) {
+					if (isMobile) {
+						el.style.position = 'relative';
+						el.style.left = 'auto';
+						el.style.top = 'auto';
+						el.style.transform = 'none';
+						el.style.background = '#000';
+						el.style.padding = '15px';
+						el.style.color = '#fff';
+						var h2 = el.querySelector('h2');
+						if (h2) {
+							h2.style.fontSize = isVerySmallMobile ? '18px' : '22px';
+							h2.style.marginBottom = '10px';
+						}
+					}
+				});
+
+				// Fix comment section positioning
+				var contentComment = document.querySelectorAll('.content-comment');
+				contentComment.forEach(function (el) {
+					if (isMobile) {
+						el.style.position = 'relative';
+						el.style.left = 'auto';
+						el.style.top = 'auto';
+						el.style.padding = '15px';
+						el.style.width = '100%';
+					}
+				});
+
+				// Fix hero slider images
+				var heroImages = document.querySelectorAll('.img-slider-main');
+				heroImages.forEach(function (el) {
+					if (isMobile) {
+						el.style.width = '100%';
+						el.style.height = isVerySmallMobile ? '180px' : (isSmallMobile ? '200px' : '250px');
+						el.style.objectFit = 'cover';
+					}
+				});
+
+				// Fix banner images and videos
+				var bannerImages = document.querySelectorAll('.show-banner-home2 img, .show-banner-home2 video');
+				bannerImages.forEach(function (el) {
+					if (isMobile) {
+						el.style.width = '100%';
+						el.style.height = '200px';
+						el.style.objectFit = 'cover';
+					}
+				});
 			}
-		});
-		
-		// Target elements with inline font-size: 100px
-		var mediumTextElements = document.querySelectorAll('[style*="font-size: 100px"]');
-		mediumTextElements.forEach(function(el) {
-			if (isMobile) {
-				if (isVerySmallMobile) {
-					el.style.fontSize = '18px';
-					el.style.letterSpacing = '-1px';
-					el.style.marginLeft = '0';
-					el.style.marginTop = '-5px';
-				} else if (isSmallMobile) {
-					el.style.fontSize = '22px';
-					el.style.letterSpacing = '-1px';
-					el.style.marginLeft = '0';
-					el.style.marginTop = '-5px';
-				} else {
-					el.style.fontSize = '26px';
-					el.style.letterSpacing = '-1px';
-					el.style.marginLeft = '0';
-					el.style.marginTop = '-8px';
-				}
+
+			// Run on page load
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', applyMobileFixes);
+			} else {
+				applyMobileFixes();
 			}
-		});
-		
-		// Fix show-banner-home2 section alignment
-		var bannerSection = document.querySelector('.show-banner-home2 > .text-center');
-		if (bannerSection && isMobile) {
-			bannerSection.style.marginBottom = '30px';
-			var innerDiv = bannerSection.querySelector('div[style*="display: inline-block"]');
-			if (innerDiv) {
-				innerDiv.style.display = 'block';
-				innerDiv.style.marginRight = '0';
-				innerDiv.style.textAlign = 'center';
-			}
-		}
-		
-		// Fix video overlay content-pr positioning
-		var contentPr = document.querySelectorAll('.content-pr');
-		contentPr.forEach(function(el) {
-			if (isMobile) {
-				el.style.position = 'relative';
-				el.style.left = 'auto';
-				el.style.top = 'auto';
-				el.style.transform = 'none';
-				el.style.background = '#000';
-				el.style.padding = '15px';
-				el.style.color = '#fff';
-				var h2 = el.querySelector('h2');
-				if (h2) {
-					h2.style.fontSize = isVerySmallMobile ? '18px' : '22px';
-					h2.style.marginBottom = '10px';
-				}
-			}
-		});
-		
-		// Fix comment section positioning
-		var contentComment = document.querySelectorAll('.content-comment');
-		contentComment.forEach(function(el) {
-			if (isMobile) {
-				el.style.position = 'relative';
-				el.style.left = 'auto';
-				el.style.top = 'auto';
-				el.style.padding = '15px';
-				el.style.width = '100%';
-			}
-		});
-		
-		// Fix hero slider images
-		var heroImages = document.querySelectorAll('.img-slider-main');
-		heroImages.forEach(function(el) {
-			if (isMobile) {
-				el.style.width = '100%';
-				el.style.height = isVerySmallMobile ? '180px' : (isSmallMobile ? '200px' : '250px');
-				el.style.objectFit = 'cover';
-			}
-		});
-		
-		// Fix banner images and videos
-		var bannerImages = document.querySelectorAll('.show-banner-home2 img, .show-banner-home2 video');
-		bannerImages.forEach(function(el) {
-			if (isMobile) {
-				el.style.width = '100%';
-				el.style.height = '200px';
-				el.style.objectFit = 'cover';
-			}
-		});
-	}
-	
-	// Run on page load
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', applyMobileFixes);
-	} else {
-		applyMobileFixes();
-	}
-	
-	// Run on window resize
-	var resizeTimer;
-	window.addEventListener('resize', function() {
-		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function() {
-			// Reload page on significant width change to properly reset styles
-			location.reload();
-		}, 500);
-	});
-})();
-</script>
+
+			// Run on window resize
+			var resizeTimer;
+			window.addEventListener('resize', function () {
+				clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(function () {
+					// Reload page on significant width change to properly reset styles
+					location.reload();
+				}, 500);
+			});
+		})();
+	</script>
 </body>
 
 </html>
