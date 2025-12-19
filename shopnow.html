@@ -27,6 +27,37 @@
 	<link rel="stylesheet" type="text/css" href="asset/css/cache-buster.css?v=1765975727">
 	<link rel="stylesheet" type="text/css" href="asset/css/navbar-active-fix.css">
 	<style>
+		/* CLS FIX - Reserve space for elements */
+		.hero-title-section {
+			min-height: 280px;
+		}
+
+		.hero-title-section .text-new {
+			min-height: 200px;
+		}
+
+		.hero-title-section .text-collection {
+			min-height: 100px;
+		}
+
+		.shop-page .img-product img {
+			aspect-ratio: 1/1;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+
+		.shop-page .product {
+			min-height: 400px;
+		}
+
+		/* Font display */
+		.title-font,
+		.menu-child-font,
+		.number-font {
+			font-display: swap;
+		}
+
 		.footer-social-icon {
 			width: 80px;
 			height: 80px;
@@ -43,6 +74,23 @@
 		@media (max-width: 767px) {
 			.instagram {
 				display: none !important;
+			}
+
+			/* CLS FIX for mobile */
+			.hero-title-section {
+				min-height: 150px;
+			}
+
+			.hero-title-section .text-new {
+				min-height: 80px;
+			}
+
+			.hero-title-section .text-collection {
+				min-height: 45px;
+			}
+
+			.shop-page .product {
+				min-height: 280px;
 			}
 		}
 
@@ -77,6 +125,10 @@
 
 			.hero-title-section .text-collection {
 				font-size: 35px !important;
+			}
+
+			.shop-page .product {
+				min-height: 220px;
 			}
 		}
 
@@ -533,7 +585,8 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_1.jpg" class="img-responsive"
-										alt="Turkey Tail Necklace and Earring Set"></a>
+										alt="Turkey Tail Necklace and Earring Set" width="400" height="400"
+										loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -580,7 +633,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_2.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -627,7 +680,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_3.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -677,7 +730,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_1.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -724,7 +777,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_2.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -771,7 +824,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_3.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -820,7 +873,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_1.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -867,7 +920,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_2.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
@@ -914,7 +967,7 @@
 						<div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6 margin_bottom_50">
 							<div class="img-product relative">
 								<a href="#"><img src="asset/img/product_shop_3.jpg" class="img-responsive"
-										alt="Bonis Rubatosis"></a>
+										alt="Bonis Rubatosis" width="400" height="400" loading="lazy"></a>
 								<figure class="absolute uppercase label-new title-font text-center">new</figure>
 								<div class="product-icon text-center absolute">
 									<form method="post" action="/cart/add" enctype="multipart/form-data"
