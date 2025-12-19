@@ -1,0 +1,13 @@
+/* Keep navbar underline visible for active/selected page */
+.navbar-nav.menu-main li.active .line,
+.navbar-nav.menu-main li.current-page .line {
+  left: 10px;
+  right: 10px;
+}
+
+/* Ensure active state persists even after hover */
+.navbar-nav.menu-main li.active:hover .line,
+.navbar-nav.menu-main li.current-page:hover .line {
+  left: 10px;
+  right: 10px;
+}

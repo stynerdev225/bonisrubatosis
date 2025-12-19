@@ -1,0 +1,7 @@
+/* Force shop dropdown image to exact 328x328 size */
+.mega-menu-shop .banner-menu .product .img-product img {
+  width: 328px !important;
+  height: 328px !important;
+  object-fit: cover !important;
+  display: block !important;
+}

@@ -1,0 +1,30 @@
+/* Fix to move "Bonis Rubatosis — Online Market" text vertically up */
+.show-banner-home2 .show-banner-2-home2 .banner-col-1 .text-comment .content-comment {
+    top: 15% !important; /* Changed from 30% to 15% to move it up */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1600px) {
+    .show-banner-home2 .show-banner-2-home2 .banner-col-1 .text-comment .content-comment {
+        top: 12% !important; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .show-banner-home2 .show-banner-2-home2 .banner-col-1 .text-comment .content-comment {
+        top: 10% !important; /* Further adjustment for mobile */
+    }
+}
+
+@media (max-width: 767px) {
+    .show-banner-home2 .show-banner-2-home2 .banner-col-1 .text-comment .content-comment {
+        top: 8% !important; /* Mobile optimization */
+    }
+}
+
+/* Make img_insta_home3_3.mp4 video same size as img_section1_home2_7.jpg */
+video[src*="img_insta_home3_3.mp4"] {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}

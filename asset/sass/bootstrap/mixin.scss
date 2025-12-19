@@ -1,0 +1,26 @@
+@mixin background-image($url,$position){
+	background-image:url($url);
+	background-position: $position;
+    height: auto;
+    background-repeat: no-repeat;
+}
+@mixin label($color,$bg){
+	width: 70px;
+	height: 35px;
+	color: $color;
+	background: $bg;
+	text-transform: uppercase;
+}
+@mixin label-around($color,$bg){
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: $color;
+	background: $bg;
+}
+@mixin border-left($color){
+	border-left: 1px solid $color;
+}
+@mixin border-right($color){
+	border-right: 1px solid $color;
+}

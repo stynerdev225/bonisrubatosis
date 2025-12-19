@@ -1,0 +1,52 @@
+$input-number-size: 80px;
+
+.input-number-group {
+  display: flex;
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+  }
+
+  .input-group-button {
+    line-height: calc(#{$input-number-size}/2-10px);
+  }
+
+  .input-number {
+    width: $input-number-size/2;
+    text-align: center;
+    outline: none;
+    display: block;
+    margin: 0;
+  }
+
+  .input-number,
+  .input-number-decrement,
+  .input-number-increment {
+    user-select: none;
+    
+  }
+
+  .input-number-decrement,
+  .input-number-increment {
+    display: inline-block;
+    width: $input-number-size/2-10px;
+    background: #fff;
+    color: #909090;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .input-number-decrement {
+    margin-right: 0.3rem;
+  }
+
+  .input-number-increment {
+    margin-left: 0.3rem;
+  }
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
