@@ -598,38 +598,91 @@
 
 		.mobile-hero-image {
 			margin-top: 30px;
-			min-height: 300px;
+			min-height: 350px;
 			overflow: hidden;
-			/* CLS fix - reserve space for image */
+			position: relative;
+			border-radius: 16px;
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
-		/* Mobile Hero Image Carousel - Infinite Auto-Rotating */
+		/* Mobile Hero Image Carousel - Vertical Page Swipe Style */
 		.mobile-hero-carousel {
-			display: flex;
-			animation: heroScroll 25s linear infinite;
-			width: fit-content;
-		}
-
-		@keyframes heroScroll {
-			0% {
-				transform: translateX(0);
-			}
-
-			100% {
-				transform: translateX(-50%);
-			}
+			position: relative;
+			width: 100%;
+			height: 350px;
 		}
 
 		.mobile-hero-carousel .hero-slide {
-			flex: 0 0 280px;
-			margin: 0 10px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			animation: fadeSlide 28s infinite;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(1) {
+			animation-delay: 0s;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(2) {
+			animation-delay: 4s;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(3) {
+			animation-delay: 8s;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(4) {
+			animation-delay: 12s;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(5) {
+			animation-delay: 16s;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(6) {
+			animation-delay: 20s;
+		}
+
+		.mobile-hero-carousel .hero-slide:nth-child(7) {
+			animation-delay: 24s;
+		}
+
+		@keyframes fadeSlide {
+			0% {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+
+			3% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			14% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			17% {
+				opacity: 0;
+				transform: translateY(-30px);
+			}
+
+			100% {
+				opacity: 0;
+			}
 		}
 
 		.mobile-hero-carousel .hero-slide img {
-			width: 280px;
-			height: 350px;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
-			border-radius: 12px;
+			border-radius: 16px;
 		}
 
 		/* MOBILE PRODUCTS STYLES */
@@ -1100,49 +1153,33 @@
 			<a href="shopnow.html" class="shop-btn">Shop Now</a>
 			<div class="mobile-hero-image">
 				<div class="mobile-hero-carousel">
-					<!-- First set -->
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/BonisRubatosistienda-dress.avif" alt="Bonis Rubatosis" loading="eager">
+						<img src="asset/herosection-assets/BonisRubatosistienda-dress.avif" alt="Bonis Rubatosis"
+							loading="eager">
 					</div>
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_34526e00b1da40cabc58cdb716e24d72~mv2 copy.avif" alt="Bonis Rubatosis" loading="eager">
+						<img src="asset/herosection-assets/c3b35a_34526e00b1da40cabc58cdb716e24d72~mv2 copy.avif"
+							alt="Bonis Rubatosis" loading="eager">
 					</div>
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_0a247e9c54754ab69ae88c8959f2c4bb~mv2.avif" alt="Bonis Rubatosis" loading="lazy">
+						<img src="asset/herosection-assets/c3b35a_0a247e9c54754ab69ae88c8959f2c4bb~mv2.avif"
+							alt="Bonis Rubatosis" loading="lazy">
 					</div>
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_2a3827693b0f463da4bfcccc9befce83~mv2.avif" alt="Bonis Rubatosis" loading="lazy">
+						<img src="asset/herosection-assets/c3b35a_2a3827693b0f463da4bfcccc9befce83~mv2.avif"
+							alt="Bonis Rubatosis" loading="lazy">
 					</div>
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_403190c7e5804683948ea801e9780dca~mv2 copy.avif" alt="Bonis Rubatosis" loading="lazy">
+						<img src="asset/herosection-assets/c3b35a_403190c7e5804683948ea801e9780dca~mv2 copy.avif"
+							alt="Bonis Rubatosis" loading="lazy">
 					</div>
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_51b553cd44544870b30fe98e1e9b8d3e~mv2.avif" alt="Bonis Rubatosis" loading="lazy">
+						<img src="asset/herosection-assets/c3b35a_51b553cd44544870b30fe98e1e9b8d3e~mv2.avif"
+							alt="Bonis Rubatosis" loading="lazy">
 					</div>
 					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_b07f00c2b5944a23bd067e1d1d33d523~mv2 copy.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<!-- Duplicate set for seamless infinite loop -->
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/BonisRubatosistienda-dress.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_34526e00b1da40cabc58cdb716e24d72~mv2 copy.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_0a247e9c54754ab69ae88c8959f2c4bb~mv2.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_2a3827693b0f463da4bfcccc9befce83~mv2.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_403190c7e5804683948ea801e9780dca~mv2 copy.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_51b553cd44544870b30fe98e1e9b8d3e~mv2.avif" alt="Bonis Rubatosis" loading="lazy">
-					</div>
-					<div class="hero-slide">
-						<img src="asset/herosection-assets/c3b35a_b07f00c2b5944a23bd067e1d1d33d523~mv2 copy.avif" alt="Bonis Rubatosis" loading="lazy">
+						<img src="asset/herosection-assets/c3b35a_b07f00c2b5944a23bd067e1d1d33d523~mv2 copy.avif"
+							alt="Bonis Rubatosis" loading="lazy">
 					</div>
 				</div>
 			</div>
