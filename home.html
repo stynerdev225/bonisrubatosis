@@ -34,6 +34,17 @@
 	<link rel="stylesheet" type="text/css" href="asset/css/content-position-fix.css">
 	<link rel="stylesheet" type="text/css" href="asset/css/home-mobile-fix.css">
 	<style>
+		/* FIX: Prevent push menu swipe interference on scroll */
+		.pushmenu.menu-home5 {
+			visibility: hidden;
+			pointer-events: none;
+		}
+		
+		.pushmenu.menu-home5.pushmenu-open {
+			visibility: visible;
+			pointer-events: auto;
+		}
+
 		.footer-social-icon {
 			width: 80px;
 			height: 80px;
