@@ -618,7 +618,7 @@
 			/* CLS fix - reserve space */
 		}
 
-		/* MOBILE VIDEO CAROUSEL */
+		/* MOBILE VIDEO CAROUSEL - Infinite Auto-Rotating */
 		.mobile-video-carousel {
 			padding: 20px 0;
 			background: #fff;
@@ -627,27 +627,33 @@
 
 		.mobile-video-carousel .carousel-track {
 			display: flex;
-			gap: 10px;
-			overflow-x: auto;
-			scroll-snap-type: x mandatory;
-			-webkit-overflow-scrolling: touch;
-			scrollbar-width: none;
-			padding: 0 15px;
+			gap: 15px;
+			animation: scrollCarousel 20s linear infinite;
+			width: fit-content;
 		}
 
-		.mobile-video-carousel .carousel-track::-webkit-scrollbar {
-			display: none;
+		@keyframes scrollCarousel {
+			0% {
+				transform: translateX(0);
+			}
+
+			100% {
+				transform: translateX(-50%);
+			}
+		}
+
+		.mobile-video-carousel:hover .carousel-track {
+			animation-play-state: paused;
 		}
 
 		.mobile-video-carousel .video-item {
-			flex: 0 0 85%;
-			scroll-snap-align: center;
+			flex: 0 0 280px;
 			border-radius: 12px;
 			overflow: hidden;
 		}
 
 		.mobile-video-carousel .video-item video {
-			width: 100%;
+			width: 280px;
 			height: 350px;
 			object-fit: cover;
 			display: block;
@@ -1076,9 +1082,31 @@
 			</div>
 		</section>
 
-		<!-- Mobile Video Carousel (above products) -->
+		<!-- Mobile Video Carousel (above products) - Infinite Rotating -->
 		<section class="mobile-video-carousel">
 			<div class="carousel-track">
+				<!-- First set -->
+				<div class="video-item">
+					<video autoplay muted loop playsinline>
+						<source src="asset/img/img_insta_home3_2.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="video-item">
+					<video autoplay muted loop playsinline>
+						<source src="asset/img/img_insta_home3_3.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="video-item">
+					<video autoplay muted loop playsinline>
+						<source src="asset/img/img_insta_home3_4.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="video-item">
+					<video autoplay muted loop playsinline>
+						<source src="asset/img/img_insta_home3_5.mp4" type="video/mp4">
+					</video>
+				</div>
+				<!-- Duplicate set for seamless infinite loop -->
 				<div class="video-item">
 					<video autoplay muted loop playsinline>
 						<source src="asset/img/img_insta_home3_2.mp4" type="video/mp4">
